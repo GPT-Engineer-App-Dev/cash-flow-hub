@@ -4,7 +4,7 @@ const Index = () => {
   return (
     <Container maxW="container.xl" p={0}>
       {/* Navigation Bar */}
-      <Flex as="nav" bg="gray.800" color="white" p={4} justifyContent="space-between" alignItems="center">
+      <Flex as="nav" bg="#fff1e5" color="black" p={4} justifyContent="space-between" alignItems="center">
         <Heading as="h1" size="lg">Financial Times</Heading>
         <HStack spacing={4}>
           <Link href="#" color="white">Home</Link>
@@ -35,7 +35,7 @@ const Index = () => {
         </Box>
 
         {/* Sidebar */}
-        <Box flex="1" p={4} bg="gray.100" borderRadius="lg" ml={{ md: 4 }} mt={{ base: 4, md: 0 }}>
+        <Box flex="1" p={4} bg="#f3f2f1" borderRadius="lg" ml={{ md: 4 }} mt={{ base: 4, md: 0 }}>
           <Heading as="h2" size="lg" mb={4}>More News</Heading>
           <VStack spacing={4} align="stretch">
             <Box>
