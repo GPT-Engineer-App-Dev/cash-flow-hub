@@ -1,18 +1,58 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Box, Container, Flex, Heading, Text, VStack, HStack, Link, Image } from "@chakra-ui/react";
 
 const Index = () => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
-      </VStack>
+    <Container maxW="container.xl" p={0}>
+      {/* Navigation Bar */}
+      <Flex as="nav" bg="gray.800" color="white" p={4} justifyContent="space-between" alignItems="center">
+        <Heading as="h1" size="lg">Financial Times</Heading>
+        <HStack spacing={4}>
+          <Link href="#" color="white">Home</Link>
+          <Link href="#" color="white">World</Link>
+          <Link href="#" color="white">Business</Link>
+          <Link href="#" color="white">Tech</Link>
+          <Link href="#" color="white">Culture</Link>
+        </HStack>
+      </Flex>
+
+      {/* Main Content */}
+      <Flex direction={{ base: "column", md: "row" }} mt={4}>
+        {/* Featured Articles */}
+        <Box flex="3" p={4}>
+          <Heading as="h2" size="xl" mb={4}>Featured News</Heading>
+          <VStack spacing={4} align="stretch">
+            <Box borderWidth="1px" borderRadius="lg" overflow="hidden" p={4}>
+              <Image src="https://via.placeholder.com/800x400" alt="Article Image" mb={4} />
+              <Heading as="h3" size="lg">Article Title 1</Heading>
+              <Text mt={2}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</Text>
+            </Box>
+            <Box borderWidth="1px" borderRadius="lg" overflow="hidden" p={4}>
+              <Image src="https://via.placeholder.com/800x400" alt="Article Image" mb={4} />
+              <Heading as="h3" size="lg">Article Title 2</Heading>
+              <Text mt={2}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</Text>
+            </Box>
+          </VStack>
+        </Box>
+
+        {/* Sidebar */}
+        <Box flex="1" p={4} bg="gray.100" borderRadius="lg" ml={{ md: 4 }} mt={{ base: 4, md: 0 }}>
+          <Heading as="h2" size="lg" mb={4}>More News</Heading>
+          <VStack spacing={4} align="stretch">
+            <Box>
+              <Heading as="h3" size="md">Sidebar Article 1</Heading>
+              <Text mt={2}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
+            </Box>
+            <Box>
+              <Heading as="h3" size="md">Sidebar Article 2</Heading>
+              <Text mt={2}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
+            </Box>
+            <Box>
+              <Heading as="h3" size="md">Sidebar Article 3</Heading>
+              <Text mt={2}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
+            </Box>
+          </VStack>
+        </Box>
+      </Flex>
     </Container>
   );
 };
